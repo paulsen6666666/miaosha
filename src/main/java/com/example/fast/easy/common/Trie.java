@@ -5,6 +5,7 @@ package com.example.fast.easy.common;
  * @Date 2022/7/20 23:38
  */
 class Trie {
+    //
     private Trie[] children;
     private boolean isEnd;
 
