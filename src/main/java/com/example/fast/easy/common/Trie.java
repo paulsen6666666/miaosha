@@ -6,6 +6,7 @@ package com.example.fast.easy.common;
  */
 class Trie {
     //
+    //
     private Trie[] children;
     private boolean isEnd;
 
