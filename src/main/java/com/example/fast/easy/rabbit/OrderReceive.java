@@ -21,9 +21,9 @@ import java.io.IOException;
 @Slf4j
 @Component
 public class OrderReceive {
-    @Qualifier("omsOrderRedisServiceImpl")
-    @Autowired
-    private SeckillService seckillService;
+   // @Qualifier("omsOrderRedisServiceImpl")
+    //@Autowired
+    //private SeckillService seckillService;
 
     @Autowired
     private OmsOrderService omsOrderService;
@@ -36,7 +36,7 @@ public class OrderReceive {
     public void receiveSeckillMsg(SeckillMsg seckillMsg, Message msg, Channel channel) throws IOException {
         log.info("TAG:{}",String.valueOf(msg.getMessageProperties().getDeliveryTag()));
         // 消费者消费  执行秒杀请求
-        seckillService.seckill(seckillMsg.getSeckillId(),seckillMsg.getMemberId());
+        //seckillService.seckill(seckillMsg.getSeckillId(),seckillMsg.getMemberId());
         // 手动消息确认
 
 //        channel.basicAck(msg.getMessageProperties().getDeliveryTag(),true);

@@ -1,4 +1,34 @@
-package com.example.fast.easy.service.impl;
+import com.example.fast.easy.common.Constant;
+import com.example.fast.easy.common.RestResponse;
+import com.example.fast.easy.service.OmsOrderService;
+import com.example.fast.easy.service.SeckillService;
+import com.example.fast.easy.util.RedisUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.core.RedisOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SessionCallback;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+/*import com.example.fast.easy.common.Constant;
+import com.example.fast.easy.common.RestResponse;
+import com.example.fast.easy.service.OmsOrderService;
+import com.example.fast.easy.service.SeckillService;
+import com.example.fast.easy.util.RedisUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.core.RedisOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SessionCallback;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+/*package com.example.fast.easy.service.impl;
 
 import com.example.fast.easy.common.Constant;
 import com.example.fast.easy.common.RestResponse;
@@ -19,7 +49,7 @@ import java.util.List;
  * @author paul
  * @Date 2022/7/16 0:43
  */
-@Slf4j
+/*@Slf4j
 @Service
 public class OmsOrderRedisServiceImpl implements SeckillService {
 
@@ -105,4 +135,4 @@ public class OmsOrderRedisServiceImpl implements SeckillService {
     }
 
 
-}
+}*/

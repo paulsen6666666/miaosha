@@ -21,11 +21,11 @@ spring:
         max-idle: 8
         max-wait: -1ms
       shutdown-timeout: 100ms
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: guest
-    password: guest
+  #rabbitmq:
+   # host: 127.0.0.1
+    #port: 5672
+    #username: guest
+    #password: guest
 #    listener:
 #      type: simple
 #      simple:
