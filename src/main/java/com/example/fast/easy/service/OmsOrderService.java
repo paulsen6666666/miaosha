@@ -11,7 +11,7 @@ public interface OmsOrderService {
     /**
      * 秒杀订单生成
      */
-    @Transactional(rollbackFor = Throwable.class)
+    @Transactional(rollbackFor = Exception.class)
     void orderGenerate(Long seckillId, Long memberId);
 
     /**

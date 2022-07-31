@@ -1,3 +1,5 @@
+package com.example.fast.easy.service.impl;
+
 import com.example.fast.easy.common.Constant;
 import com.example.fast.easy.common.RestResponse;
 import com.example.fast.easy.service.OmsOrderService;
@@ -49,7 +51,7 @@ import java.util.List;
  * @author paul
  * @Date 2022/7/16 0:43
  */
-/*@Slf4j
+@Slf4j
 @Service
 public class OmsOrderRedisServiceImpl implements SeckillService {
 
@@ -135,4 +137,4 @@ public class OmsOrderRedisServiceImpl implements SeckillService {
     }
 
 
-}*/
+}
