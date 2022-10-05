@@ -206,6 +206,141 @@ public class Test3 {
 
     }
 
+    public int minCostClimbingStairs(int[] cost) {
+
+        int dp [] = new int[cost.length];
+
+        dp[0] = 0;
+        dp[1] = 0;
+
+
+        for(int i =0;i<cost.length;i++){
+            dp[i] = Math.min(dp[i-1]+cost[i-1],dp[i-2]+cost[i-2]);
+
+        }
+        return dp[cost.length];
+
+
+
+
+    }
+
+    public int numTrees(int n) {
+
+        int dp [] = new int[n];
+
+        dp[0] = 1;
+
+        for(int i =1;i<n;i++){
+            for(int j =0;i<=j;j++){
+                dp[i] = dp[j-1]*dp[i-j];
+
+            }
+
+        }
+
+        return dp[n];
+    }
+
+    public int[] nextGreaterElements(int[] nums) {
+
+        //边界判断
+        if(nums == null || nums.length <= 1) {
+            return new int[]{-1};
+        }
+
+        if(nums == null || nums.length <= 1) {
+            return new int[]{-1};
+        }
+
+        int twoNums []= new int[nums.length*2];
+        for(int i =0;i< nums.length;i++){
+            twoNums[i] = nums[i];
+            for(int j =0;j<nums.length;j++){
+                twoNums[i+nums.length]=nums[j];
+
+
+            }
+        }
+        int size = nums.length;
+        int[] result = new int[twoNums.length];//存放结果
+
+        Arrays.fill(result,-1);//默认全部初始化为-1
+        Stack<Integer> st= new Stack<>();//栈中存放的是nums中的元素下标
+
+        for(int i =0;i<nums.length;i++){
+            while(!st.isEmpty() && nums[i] > nums[st.peek()]){
+                result[i] = st.peek();
+                st.pop();
+
+            }
+
+            st.push(i);
+
+        }
+        //在循环一次呗。
+        return result;
+
+
+
+
+    }
+
+
+
+    public int trap(int[] height) {
+        int sum = 0;
+
+        for(int i =0;i<height.length;i++){
+            if(i == 0&& i == height.length-1){
+                continue;
+
+            }
+
+            int rHeight = height[i]; // 记录右边柱子的最高高度
+            int lHeight = height[i]; // 记录左边柱子的最高高度
+
+            for (int r =i+1;r<height.length;r++){
+                if(height[r]>rHeight){
+                    rHeight = height[r];
+
+                }
+
+            }
+
+            for(int l = i-1;l>0;l--){
+                if(height[l] > lHeight){
+                    lHeight = height[l];
+
+                }
+
+            }
+
+            int h = Math.min(lHeight, rHeight) - height[i];
+            if (h > 0) sum += h;
+
+
+
+
+
+
+
+
+        }
+        return 1;
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
